@@ -1,14 +1,19 @@
 import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import { ChakraProvider } from '@chakra-ui/react';
+
 import Home from './pages/Home';
 
 export default function ReactRouter() {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
+      <ChakraProvider>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </ChakraProvider>
     </Router>
   )
 }
