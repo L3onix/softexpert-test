@@ -49,11 +49,11 @@ class Product extends Entity
 
   public function create()
   {
-    $this->repository->insert($this);
+    return $this->repository->insert($this);
   }
 
   public function listAll()
   {
-    
+    return $this->repository->selectAll();
   }
 }
