@@ -9,10 +9,10 @@ class Database
 {
   static public function getConnection(): PDO
   {
-    $host = getenv('DB_HOST');
-    $database = getenv('DB_DATABASE');
-    $user = getenv('DB_USER');
-    $password = getenv('DB_PASSWORD');
+    $host = $_ENV['DB_HOST'];
+    $database = $_ENV['DB_DATABASE'];
+    $user = $_ENV['DB_USER'];
+    $password = $_ENV['DB_PASSWORD'];
     try {
       $pdo = new PDO("pgsql:host=$host;dbname=$database", $user, $password);
     } catch (Throwable $error) {
