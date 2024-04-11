@@ -27,7 +27,7 @@ class ProductRepository extends Repository
 
     public function selectAll(): array
     {
-        $sql = 'select * products';
+        $sql = 'select * from products';
         $result = $this->executeStatement(
             $this->connection->prepare($sql),
             null
